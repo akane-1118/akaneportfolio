@@ -1,0 +1,1158 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%
+}
+body {
+    font-family: 'Futura','Avenir','Trebuchet MS','TsukuARdGothic-Regular','YuGothic','Yu Gothic',sans-serif;
+    line-height: 1.7;
+    color: #5f5f5f;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+.br-sp {
+    display: none;
+}
+
+/* ヘッダー
+------------------------------ */
+.logo {
+    margin-top: 27px;
+}
+.main-nav {
+    display: flex;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 60px;
+    list-style: none;
+}
+.main-nav li {
+    margin-left: 50px;
+}
+.main-nav a {
+    color: #5f5f5f;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-item {
+    position: relative;
+}
+.nav-item::after {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    content: "" ;
+    width: 100%;
+    height: 2px;
+    background-color: #787878;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+.nav-item:hover::after {
+    opacity: 0;
+    animation-name: fadein-bottom;
+    animation-duration: .8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+.nav-item:hover::after {
+    bottom: -10px;
+    visibility: visible;
+}
+@keyframes fadein-bottom {
+    0%{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* メインページ
+----------------------------- */
+.main-sec {
+    padding-bottom: 400px;
+    margin-top:50px;
+}
+.main-sec .main-img {
+    display: flex;
+    flex-direction: row;
+}
+.main-sec .main-img > p {
+    flex-basis: 800px;
+    order: 2;
+}
+.main-sec .main-img > div {
+    flex-basis: 400px;
+    padding-top: 130px;
+    order: 1;
+    z-index: 1;
+}
+.main-sec .main-title {
+    font-size: 48px;
+    line-height: 2.0;
+    letter-spacing: 7px;
+    margin-right: -150px;
+    text-shadow: 3px 3px 3px #b7b7b7;
+}
+.main-sec .main-sentence {
+    font-size: 15px;
+    line-height: 2.0;
+    letter-spacing: 5px;
+    margin-top: 150px;
+}
+.main-img img {
+    width: 800px;
+    height: 700px;
+    object-fit: cover;
+}
+.title {
+    background-image: url(../images/Group\ 60.png);
+    background-repeat: no-repeat;
+    background-position: 5px 120px;
+    background-size: auto;
+}
+.main-sab {
+    font-size: 20px;
+    font-style: oblique;
+    color: #8e8e8e;
+    letter-spacing: 3px;
+    margin-left: 180px ;
+    margin-top: 50px;
+}
+.under {
+    background: linear-gradient(transparent 75%,#dedede 75%);
+}
+
+/* about
+-------------------------------*/
+.about-sec {
+    background-color: #acc3d63a;
+    padding-top: 250px;
+}
+.about-page {
+    display: flex;
+    justify-content: space-between;
+}
+.about-page > p {
+    flex-basis: 500px;
+}
+.about-page > div {
+    flex-basis: 700px;
+}
+.about-img {
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+    margin-top: 50px;
+    margin-bottom: 350px;
+}
+.about-group {
+    position: relative;
+}
+.about-en {
+    text-align: center;
+    margin-top: -140px;
+}
+.about {
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+.title-border {
+    display: flex;
+    align-items: center;
+}
+
+.title-border:before {
+    content: "";
+    height: 0px;
+    flex-grow: 1;
+}
+.title-border:after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background-color: #666;
+}
+
+.title-border:before {
+    margin-right: 1rem;
+}
+
+.title-border:after {
+    margin-left: 1rem;
+}
+.about-sab {
+    font-size: 15px;
+    font-family: 'TsukuARdGothic-Regular','YuGothic','Yu Gothic',sans-serif;
+    line-height: 2.5rem;
+    letter-spacing: 3px;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.profile a {
+    font-size: 13px;
+    color: #5f5f5f;
+    letter-spacing: 3px;
+}
+.profile-en {
+    margin-top: 120px;
+    text-align: right;
+}
+.profile {
+    margin-top: -110px;
+    margin-right: 60px;
+    text-align: right;
+}
+.btnarrow {
+	position: relative;
+    display: inline-block;
+	padding: 0 20px;
+    color: #5f5f5f;
+    text-decoration: none;
+    outline: none;
+}
+.btnarrow::before{
+    content: '';
+	position: absolute;
+    bottom:-8px;
+    left:15%;  
+    width: 85%;
+    height: 1px;
+	background:#5f5f5f;
+    transition: all .3s;
+}
+.btnarrow::after{
+    content: '';
+	position: absolute;
+    bottom:-3px;
+    right:0;
+    width: 15px;
+    height:1px;
+	background:#5f5f5f;
+    transform: rotate(35deg);
+    transition: all .3s;
+}
+.btnarrow:hover::before{
+    left:20%;
+}
+.btnarrow:hover::after{
+    right:-5%;
+}
+
+/* works
+-------------------------------- */
+.wrapper-works {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 4%;
+    margin-bottom: 200px;
+}
+.works-sec {
+    background-image: url(../images/Group\ 70.png);
+    background-size: 330px 400px;
+    background-repeat: no-repeat;
+    background-position: 90% 100%;
+}
+.works {
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin-left: 70px;
+    margin-top: -140px;
+    margin-bottom: 150px;
+}
+.works-border {
+    position: relative;
+}
+.works-border::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 1px;
+    margin-left: -350px;
+    margin-top: 25px;
+    background-color: #5f5f5f;
+}
+.works-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 4%;
+    padding-bottom: 200px;
+}
+.works-list li {
+    flex-basis: 30%;
+    margin-bottom: 50px;
+    list-style: none;
+    font-family: 'TsukuARdGothic-Regular','YuGothic','Yu Gothic',sans-serif;  
+}
+.works-list img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border: solid 1px #bcbcbc;
+}
+.works-list img:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.main {
+    font-size: 15px;
+    font-weight: bold;
+}
+.sub {
+    font-size: 13px;
+    color: #888;
+}
+.works-img {
+    margin-top: 250px;
+}
+
+
+/* contact
+------------------------------------*/
+
+.contact-sec {
+    background-image: url(../images/Group\ 74.png);
+    background-size: contain;
+    background-position: 0 30%;
+    background-repeat: no-repeat;
+    padding-bottom: 500px;
+}
+.contact {
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin-bottom: 100px;
+}
+.contact-border {
+    display: flex;
+    align-items: center;
+}
+.contact-border:before,
+.contact-border:after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background-color: #5f5f5f;
+}
+.contact-border:before {
+    margin-right: 1rem;
+}
+.contact-border:after {
+    margin-left: 1rem;
+}
+.contact-mess {
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.form-background {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #dcdcdc3b;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 4px 8px;
+}
+textarea {
+    height: 200px;
+    margin-bottom: 50px;
+}
+form > p {
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.submit-btn {
+    text-align: center;
+}
+input[type="submit"] {
+    background-color: #839fb67d;
+    font-size: 14px;
+    padding: 18px 60px;
+    transition: .3s;
+}
+input[type="submit"]:hover {
+    background-color: #839fb6;
+    color: #fff;
+    border: none;
+}
+
+/* footer
+-----------------------------------*/
+footer {
+    background-color: #dcdcdc;
+    color: #888;
+    padding: 60px 0 ;
+}
+footer p {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+.footer-1 {
+    display: flex;
+    align-items: center;
+}
+.icon {
+    margin-right: 30px;
+} 
+
+/* sub about
+------------------------------------*/
+.main-capstion {
+    background-image: url(../images/kobanagara35.png);
+    background-size: cover;
+    padding: 120px 0;
+    font-size: 42px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.profile-sc {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 4%;
+    margin-bottom: 200px;
+}
+.sub-cap {
+    letter-spacing: 3px;
+    position: relative;
+    margin-top: 200px;
+}
+.cap-1 {
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 5px;
+}
+.sub-cap::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 1px;
+    margin-top: 25px;
+    margin-left: -320px;
+    background-color: #5f5f5f;
+}
+article {
+    width: 50%;
+}
+aside {
+    width: 50%;
+}
+.profile-sen {
+    display: flex;
+    justify-content: space-between;
+}
+.akane {
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-family: 'TsukuARdGothic-Regular','YuGothic','Yu Gothic',sans-serif;
+    padding-top: 70px;
+}
+.akane-1 {
+    letter-spacing: 2px;
+    line-height: 1.8;
+    font-family: 'TsukuARdGothic-Regular','YuGothic','Yu Gothic',sans-serif;
+    padding-top: 20px;
+}
+.akane-2 {
+    letter-spacing: 2px;
+    line-height: 1.8;
+    font-family: 'TsukuARdGothic-Regular','YuGothic','Yu Gothic',sans-serif;
+    padding-top: 10px;
+}
+.akane-3 {
+    letter-spacing: 2px;
+    line-height: 1.8;
+    font-family: 'TsukuARdGothic-Regular','YuGothic','Yu Gothic',sans-serif;
+    padding-top: 10px;
+}
+aside img {
+    object-fit: contain;
+    filter: blur(1px);
+}
+article {
+    background-image: url(../images/Group\ 75.png);
+    background-size: contain;
+    background-position: 0 80px;
+}
+.skill-sc {
+    background-color: #f2f2f276;
+    padding-top: 10px;
+    padding-bottom: 200px;
+}
+.skill-main {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+.skill {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+.skill .skill-1 {
+    width: 30%;
+}
+.skill .skill-2 {
+    width: 30%;
+}
+.skill-3 {
+    letter-spacing: 1px;
+    margin: 20px 0 10px;
+}
+.skill-4 {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+.tool {
+    letter-spacing: 1px;
+}
+.underline {
+    background: linear-gradient(transparent 75%,#dedede 75%);
+}
+.favorite-sc {
+    background-image: url(../images/Group\ 57.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.favorite {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+.favorite-wap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 4%;
+    padding-bottom: 300px;
+}
+.favorite-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 50px;
+}
+.favorite-list li {
+    flex-basis: 25%;
+    list-style: none;
+    margin-top: 50px;
+}
+.favorite-list img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+.contact-1 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+.button {
+    background-color: #839fb67d;
+    color: #5f5f5f;
+    border: solid 1px #888;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 18px 50px;
+    transition: .3s ;
+}
+.button:hover {
+    background-color: #839fb6;
+    color: #fff;
+}
+
+/* sub works
+------------------------------*/
+.main-capstion2 {
+    position: relative;
+    z-index: 1;
+    background-image: url(../images/kobanagara32.png);
+    background-size: cover;
+    padding: 120px 0;
+    font-size: 42px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.main-capstion2::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    opacity: 0.2;
+}
+.main-capstion2 > p {
+    position: relative;
+    z-index: 3;
+}
+.case-1 {
+    position: relative;
+    margin-top: 200px;
+}
+.case {
+    font-size: 24px;
+    letter-spacing: 3px;
+    margin-bottom: 100px;
+}
+.case-1::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 1px;
+    margin-top: 25px;
+    margin-left: -320px;
+    background-color: #5f5f5f;
+}
+.works-list1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 200px;
+}
+.works-list1 li {
+    flex-basis: 33%;
+    margin-bottom: 50px;
+    list-style: none;
+    font-family: 'TsukuARdGothic-Regular','YuGothic','Yu Gothic',sans-serif;  
+}
+.works-list1 img {
+    width: 330px;
+    height: 230px;
+    object-fit: cover;
+    border: solid 1px #bcbcbc;
+}
+.works-list1 img:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+
+/* sub contact
+------------------------------*/
+
+.main-capstion1 {
+    position: relative;
+    z-index: 1;
+    background-image: url(../images/kobanagara1.png);
+    background-size: cover;
+    padding: 120px 0;
+    font-size: 42px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.main-capstion1::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    opacity: 0.2;
+}
+.main-capstion1 > p {
+    position: relative;
+    z-index: 3;
+}
+
+
+/* akanenonakportforio
+---------------------------------*/
+.portfolio-sc {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+.works-1 {
+    text-align: left;
+    font-size: 36px;
+    letter-spacing: 7px;
+    border-bottom: solid 1.5px #5f5f5f;
+}
+.works-2 {
+    text-align: right;
+    letter-spacing: 3px;
+    line-height: 2rem;
+    margin-top: -30px;
+}
+.works-3 {
+    font-size: 13px;
+    font-family: 'TsukuARdGothic-Regular','YuGothic','Yu Gothic',sans-serif;
+    text-align: right;
+    letter-spacing: 3px;
+}
+.img-portfolio {
+    width: 1000px;
+    height: 900px;
+    object-fit: cover;
+}
+.title-1 {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    position: relative;
+    text-align: center; /* 文字の中央寄せ */
+}
+.title-1::before {
+    background-color: #5f5f5f;
+    bottom: -20px;
+    content: "";
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 80px;
+}
+.comment {
+    font-family: 'TsukuARdGothic-Regular','YuGothic','Yu Gothic',sans-serif;
+    letter-spacing: 2px;
+    line-height: 2em;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.img-pc {
+    width: 68%;
+}
+.img-sp {
+    width: 28%;
+}
+.img-border {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.img-1 {
+    width: 700px;
+    height: 2500px;
+    object-fit: cover;
+}
+.img-border img {
+    border: solid 1px #a6a6a6;
+}
+.btnlinestretches{
+    position:relative;
+    background-color: #839fb67d;
+    color:#5f5f5f;
+    border:1px solid #888;
+    padding: 10px 30px; 
+    display:inline-block;
+    text-decoration: none;
+    outline: none;
+    transition:all 0.3s ease-in-out;
+}
+.btnlinestretches:hover{
+    background:#839fb6;
+    color: #fff;
+    border-color:transparent;
+}
+.btnlinestretches::before,
+.btnlinestretches::after {
+    content:'';   
+    position:absolute;
+    border:solid #888;
+    width:10px;
+    height:10px;
+    transition:all 0.3s ease-in-out;
+}
+.btnlinestretches::before{
+    top:-6px;
+    left:-6px;
+    border-width:1px 0 0 1px;
+}
+.btnlinestretches::after{
+    bottom:-6px;
+    right:-6px;
+    border-width:0 1px 1px 0;
+}
+.btnlinestretches:hover::before,
+.btnlinestretches:hover::after{
+    width:calc(100% + 11px);
+    height:calc(100% + 11px);
+    border-color:#888;
+}
+.contact-a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact-2 {
+    letter-spacing: 3px;
+}
+
+/* スマホ版
+-----------------------------------*/
+@media screen and (max-width: 600px) {
+    .wrapper {
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: visible;
+    }
+
+    .title .main-title {
+        font-size: 36px;
+        line-height: 5rem;
+        margin-bottom: -30px;
+    }
+    .title .main-sab {
+        font-size: 18px;
+    }
+    .main-sec .main-img {
+        flex-direction: column;
+    }
+    .main-img .title {
+        order: 1;
+    }
+    .main-img img {
+        order: 2;
+    }
+    .main-sec .main-img img {
+        object-fit: cover;
+        width: max-content;
+        height: auto;
+        margin-top: -50px;
+    }
+    .title {
+        margin-top: -100px;
+    }
+    .main-sab {
+        text-align: right;
+        margin-bottom: -100px;
+    }
+    .main-sentence {
+        margin-left: 10px;
+    }
+    .main-sec .main-sentence{
+        font-size: 13px;
+        letter-spacing: 2px;
+        padding-top: 50px;
+    }
+    .br-sp {
+        display: block;
+    }
+    .main-sec {
+        margin-bottom: -500px;
+    }
+    .about {
+        font-size: 28px;
+        margin: auto;
+        margin-bottom: -100px;
+    }
+    .title-border:before,
+    .title-border:after {
+        content: none;
+    }
+    .about-en {
+        width: 250px;
+        height: 200px;
+        margin: 0 auto;
+        margin-bottom: -20px;
+    }
+    .about-page {
+        display: block;
+        margin-top: 50px;
+    }
+    .about-img {
+        width: max-content;
+        object-fit: cover;
+        height: auto;
+    }
+    .about-sab {
+        font-size: 14px;
+        margin-top: -270px;
+        margin-left: auto;
+        text-align: center;
+    }
+    .profile-en {
+        margin-top: 50px;
+        padding-bottom: 250px;
+    }
+    .profile-en img {
+        width: 150px;
+        height: 110px;
+    }
+    .profile a {
+        font-size: 11px;
+        margin-top: 30px;
+        margin-right: -20px;
+    }
+    .profile {
+        margin-left: 30px;
+    }
+    .wrapper-works {
+        max-width: 100%;
+    }
+    .works {
+        font-size: 28px;
+        margin: auto;
+        margin-top: -150px;
+        margin-bottom: 200px;
+        text-align: center;
+    }
+    .works-img {
+        width: 250px;
+        height: 220px;
+        margin: auto;
+        margin-top: 200px;
+    }
+    .works-border::before {
+        content: none;
+    }
+    .works-list {
+        display: block;
+        max-width: 330px;
+        margin: 0 auto;
+        margin-bottom: -100px;
+    }
+    .main {
+        font-size: 14px;      
+    }
+    .sub {
+        font-size: 12px;
+    }
+    .works-sec {
+        background-size: 250px 320px;
+        background-position: 120% 100%;
+    }
+    .contact-sec {
+        background-image: none;
+        margin-bottom: -200px;
+    }
+    .contact {
+        font-size: 28px;
+    }
+    .contact-mess {
+        font-size: 14px;
+        line-height: 2rem;
+        margin-top: -50px;
+        margin-bottom: 50px;
+    }
+    .form-background {
+        width: 100%;
+    }
+    form {
+        width: 92%;
+        font-size: 14px;
+    }
+    .footer-1 {
+        display: block;
+        text-align: center;
+        line-height: 3.5rem;
+    }
+    footer {
+        margin: 0;
+    }
+    .main-capstion {
+        font-size: 32px;
+        padding: 18vw;
+    }
+    .sub-cap::before {
+        content: none;
+    }
+    .sub-cap {
+        border-bottom: solid 1px #5f5f5f;
+        padding-bottom: 10px;
+    }
+    .cap-1 {
+        font-size: 20px;
+        margin-top: -50px;
+    }
+    .cap-2 {
+        font-size: 14px;
+    }
+    .profile-sc {
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 70px;
+    }
+    .profile-sen {
+        flex-direction: column-reverse;
+    }
+    article {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 150px;
+        background-position: 50% 50%;
+    }
+    aside {
+        width: 100%;
+        margin-bottom: -80px;
+    }
+    aside img {
+        margin-top: 30px;
+    }
+    .akane {
+        font-size: 18px;
+    }
+    .akane-1 {
+        font-size: 14px;
+    }
+    .akane-2 {
+        font-size: 14px;
+    }
+    .akane-3 {
+        font-size: 14px;
+    }
+    .skill-sc {
+        padding-bottom: 100px;
+    }
+    .skill-main {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .skill {
+        flex-direction: column;
+    }
+    .skill .skill-1 {
+        width: 60%;
+        max-width: fit-content;
+        margin: auto;
+        margin-bottom: 80px;
+    }
+    .skill .skill-2 {
+        width: 60%;
+        max-width: fit-content;
+        margin: auto;
+        margin-bottom: 80px;
+    }
+    .skill-3 {
+        font-size: 14px;
+    }
+    .tool {
+        font-size: 14px;
+    }
+    .skill-4 {
+        font-size: 12px;
+    }
+    .favorite-sc {
+        background-image: none;
+    }
+    .favorite-list li {
+        flex-basis: 33%;
+    }
+    .favorite-list p {
+        font-size: 14px;
+    }
+    .favorite-wap {
+        padding-bottom: 100px;
+    }
+    .contact-1 {
+        margin-bottom: 100px;
+    }
+    .button {
+        font-size: 13px;
+        padding: 18px 25px;
+    }
+    .main-capstion2 {
+        font-size: 32px;
+        padding: 18vw;
+    }
+    .case {
+        font-size: 20px;
+        border-bottom: solid 1px #5f5f5f;
+        padding-bottom: 10px;
+    }
+    .case-1::before {
+        content: none;
+    }
+    .works-list1 {
+        flex-direction: column;
+        max-width: 330px;
+        margin: 0 auto;
+        margin-bottom: -100px;
+    }
+    .main-capstion1 {
+        font-size: 32px;
+        padding: 18vw;
+    }
+    .works-1 {
+        font-size: 24px;
+    }
+    .works-2 {
+        font-size: 14px;
+    }
+    .works-3 {
+        font-size: 12px;
+        margin-bottom: 50px;
+    }
+    .title-1 {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .comment {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    .img-border {
+        display: block;
+    }
+    .img-1 {
+        height: auto;
+        object-fit: cover;
+    }
+    .img-pc {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .img-sp {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+    }
+    .contact-a {
+        display: block;
+    }
+    .contact-2 {
+        font-size: 14px;
+        margin-top: -50px;
+        margin-bottom: 50px;
+    }
+}
